@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Karaoke Video - Tunely</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+</head>
+<body class="result-page">
+
+    <div class="video-container">
+        <video id="karaoke-video" controls autoplay>
+            <!-- The generated video will be placed here by JavaScript -->
+             <source src="https://cdn.pixabay.com/video/2023/08/25/176918-857611094_large.mp4" type="video/mp4" onerror="this.parentElement.innerHTML += '<p>Error loading video.</p>';">
+        </video>
+    </div>
+
+    <div class="controls-container">
+        <h1 class="result-title">Your Video is Ready!</h1>
+        <div class="button-group">
+            <button class="glowing-btn" id="play-pause-btn">Play</button>
+            <a href="https://cdn.pixabay.com/video/2023/08/25/176918-857611094_large.mp4" download="karaoke_video.mp4" class="glowing-btn" id="download-btn">Download Video</a>
+        </div>
+         <a href="index.html" class="back-link">← Create Another</a>
+    </div>
+
+    <script src="assets/js/result.js"></script>
+</body>
+</html>

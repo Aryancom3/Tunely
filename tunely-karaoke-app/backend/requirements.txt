@@ -1,0 +1,9 @@
+Flask
+# For audio separation
+audio-separator
+# For transcription
+whisper-timestamped
+# For speaker diarization
+pyannote.audio
+# For .ass file creation
+ass

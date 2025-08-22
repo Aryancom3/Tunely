@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tunely - AI Karaoke Maker</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="loader" class="loader-container" style="display: none;">
+        <div class="loader"></div>
+        <p class="loading-text">Crafting your karaoke video... please wait.</p>
+    </div>
+
+    <header class="hero-section">
+        <video autoplay muted loop id="hero-video">
+            <source src="https://cdn.pixabay.com/video/2024/05/23/211589-943923784_large.mp4" type="video/mp4" onerror="this.parentElement.style.backgroundColor = '#0a0a1a';">
+        </video>
+        <div class="hero-content">
+            <h1 class="brand-name">Tunely</h1>
+            <p class="hero-text"><span id="typing-effect"></span></p>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="upload-section">
+            <div class="glass-container">
+                <h2>Create Your Karaoke Video</h2>
+                <p class="subtitle">Upload your Hindi or Marathi song to get started.</p>
+                <div class="upload-box" id="upload-box">
+                    <input type="file" id="audio-upload" accept="audio/*" hidden>
+                    <div class="upload-content">
+                        <svg class="upload-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/></svg>
+                        <p><strong>Drag & drop your audio file here</strong></p>
+                        <p class="small-text">or</p>
+                        <button class="glowing-btn" id="browse-btn">Browse File</button>
+                    </div>
+                </div>
+                <div id="file-name" class="file-name-display"></div>
+                <button class="glowing-btn process-btn" id="process-btn" disabled>Generate Karaoke</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
